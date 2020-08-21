@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="mod_skate_low" motionHint="static" trackingMode="default"/>
+
+</Tracking>
+
+<Assembly name="mod_skate_lows_assembly" assemblyId="96936357983545b884c0fd85c70d0375">
+<Part name="mod_skate_low" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.00347838 1.74686 13.3332" rotation="AD: 0.9999999981472409 0.0015304973291751522 -0.03983423610327093 184.397" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
