@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="Dante" motionHint="static" trackingMode="scan"/>
+
+</Tracking>
+
+<Assembly name="Dantes_assembly" assemblyId="0be58d2bd00c48f987ebffc76b8a3b32">
+<Part name="Dante" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.109107 3.1843 10.9835" rotation="AD: -0.777470706774633 0.6367454726877699 6.3693061754733264 181.381" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>

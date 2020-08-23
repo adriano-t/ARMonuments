@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="20.0" toolVersion="9.2.7">
+<ModelTarget name="porta_palio_grande" targetId="4aa6627c921d402d91b94d685dd20f1e" version="11.1" toolVersion="9.2.7" bbox="-3.598942 -0.162102 -0.786911 3.780105 9.924682 2.162519" previewImage="4aa6627c921d402d91b94d685dd20f1e_preview.jpg"/>
+<ModelTarget name="porta_palio_piccola" targetId="fb7a7c92829a4ded80bcaa0eac5025f7" version="11.1" toolVersion="9.2.7" bbox="-4.026766 -0.333791 -0.548768 3.852321 9.941297 2.182099" previewImage="fb7a7c92829a4ded80bcaa0eac5025f7_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="porta_palio_grandes_assembly" assemblyId="aab0f5b2369042c7b5292b9df507b4d0">
+<Part name="porta_palio_grande" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.103332 4.92136 17.1864" rotation="AD: 0.9999999999936158 -0.000385340480166084 -0.009281453753340194 175.245" image="porta_palio_grande_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+<Assembly name="porta_palio_piccolas_assembly" assemblyId="a940369a99ca498d8fcf42eeca696ed4">
+<Part name="porta_palio_piccola" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.114037 4.83916 14.4022" rotation="AD: 0.9999999992662288 0.002352778203912072 0.016450162931020397 163.723" image="porta_palio_piccola_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+<ModelTargetDatabase mtDBid="24efc84bf6b545f7af9ecefe7edb3be4" name="porta_palio_spezzata_texture" toolVersion="13.0" version="13.0">
+    <RecognitionResult assemblyId="a940369a99ca498d8fcf42eeca696ed4" assemblyName="porta_palio_piccola" entryPoint="viewpoint_0000" />
+    <RecognitionResult assemblyId="aab0f5b2369042c7b5292b9df507b4d0" assemblyName="porta_palio_grande" entryPoint="viewpoint_0000" />
+</ModelTargetDatabase>
+
+</QCARInfo>

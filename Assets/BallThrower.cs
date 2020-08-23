@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
 
 public class BallThrower : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class BallThrower : MonoBehaviour
     public Transform modelTarget;
     public float force = 10;
     public Text label;
+    void Start()
+    {
+        CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+        
+        
+    }
     private void Update ()
     {
         if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="20.0" toolVersion="9.2.7">
+<ModelTarget name="porta_palio_full" targetId="176094d2b8c24e04aec1af5554980975" version="11.1" toolVersion="9.2.7" bbox="-15.495012 -0.457711 -0.786911 15.283607 9.942698 8.148186" previewImage="176094d2b8c24e04aec1af5554980975_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="porta_palio_fulls_assembly" assemblyId="8b8a4ce139534245b0290d10541481de">
+<Part name="porta_palio_full" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.163615 5.02601 25.761" rotation="AD: 0.9999999999968228 0.0003206070239613557 0.00786943038472367 175.334" image="porta_palio_full_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>

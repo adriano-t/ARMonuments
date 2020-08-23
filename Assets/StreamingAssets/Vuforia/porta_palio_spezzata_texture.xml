@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="porta_palio_grande" motionHint="static" trackingMode="scan"/>
+<ModelTarget name="porta_palio_piccola" motionHint="static" trackingMode="scan"/>
+
+</Tracking>
+
+<Assembly name="porta_palio_grandes_assembly" assemblyId="aab0f5b2369042c7b5292b9df507b4d0">
+<Part name="porta_palio_grande" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="0.103332 4.92136 17.1864" rotation="AD: 0.9999999999936158 -0.000385340480166084 -0.009281453753340194 175.245" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+<Assembly name="porta_palio_piccolas_assembly" assemblyId="a940369a99ca498d8fcf42eeca696ed4">
+<Part name="porta_palio_piccola" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.114037 4.83916 14.4022" rotation="AD: 0.9999999992662288 0.002352778203912072 0.016450162931020397 163.723" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+<ModelTargetDatabase name="porta_palio_spezzata_texture" />
+</QCARConfig>

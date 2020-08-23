@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="porta_palio_full" motionHint="static" trackingMode="scan"/>
+
+</Tracking>
+
+<Assembly name="porta_palio_fulls_assembly" assemblyId="8b8a4ce139534245b0290d10541481de">
+<Part name="porta_palio_full" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.163615 5.02601 25.761" rotation="AD: 0.9999999999968228 0.0003206070239613557 0.00786943038472367 175.334" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
