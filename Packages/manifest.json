@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "com.ptc.vuforia.engine": "9.2.8",
+    "com.ptc.vuforia.engine": "9.3.3",
     "com.unity.ugui": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
