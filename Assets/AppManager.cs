@@ -93,11 +93,14 @@ public class AppManager : MonoBehaviour
         }
         else
         {
-            // Access granted and location value could be retrieved
-            Debug.Log("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
+            while (true)
+            {
+                // Access granted and location value could be retrieved
+                Debug.Log("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 
-
-            debugLabel.text += "Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp + '\n';
+                debugLabel.text = "Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp + '\n';
+                yield return new WaitForSeconds(5.0f);
+            }
         }
 
         // Stop service if there is no need to query location updates continuously
