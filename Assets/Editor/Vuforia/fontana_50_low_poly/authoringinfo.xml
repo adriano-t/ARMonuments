@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="20.0" toolVersion="9.2.7">
+<ModelTarget name="fontana_50_low_poly" targetId="6dd04e1d1d484513977836f1fe495cc9" version="11.1" toolVersion="9.2.7" bbox="-4.331890 -0.090269 -4.020881 4.655401 3.712027 6.494543" previewImage="6dd04e1d1d484513977836f1fe495cc9_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="fontana_50_low_polys_assembly" assemblyId="6846150ff6a44d718d4728dfd3eea288">
+<Part name="fontana_50_low_poly" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.397096 1.87196 12.4257" rotation="AD: 0.9640198981742885 -0.2671819146103019 9.910102667718506 180.299" image="fontana_50_low_poly_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
