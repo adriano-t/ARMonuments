@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if PLATFORM_ANDROID
+using UnityEngine.Android;
+#endif
 using UnityEngine.UI;
 using Vuforia;
 
@@ -17,8 +20,16 @@ public class AppManager : MonoBehaviour
     {
         CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 
+#if PLATFORM_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            Permission.RequestUserPermission(Permission.FineLocation); 
+        }
+#endif
+
         StartCoroutine(StartLocationService());
     }
+
 
     private void Update ()
     {
@@ -37,7 +48,7 @@ public class AppManager : MonoBehaviour
         {
             Debug.LogError("LocationService Not enabled");
             debugLabel.text += "LocationService Not enabled\n";
-            yield break;
+            //yield break;
         }
 
         // Start service before querying location
