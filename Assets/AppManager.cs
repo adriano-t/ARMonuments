@@ -21,13 +21,16 @@ public class AppManager : MonoBehaviour
         CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 
 #if PLATFORM_ANDROID
+        bool wait = false;
         if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
         {
-            Permission.RequestUserPermission(Permission.FineLocation); 
+            Permission.RequestUserPermission(Permission.FineLocation);
+            wait = true;
         }
+
+        StartCoroutine(StartLocationService(wait));
 #endif
 
-        StartCoroutine(StartLocationService());
     }
 
 
@@ -41,14 +44,25 @@ public class AppManager : MonoBehaviour
         
     }
 
-    IEnumerator StartLocationService ()
+    IEnumerator StartLocationService (bool wait)
     {
+        if (wait)
+        {
+            debugLabel.text += "Waiting for authorization\n";
+            yield return new WaitForSeconds(5.0f);
+        }
+
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
         {
             Debug.LogError("LocationService Not enabled");
             debugLabel.text += "LocationService Not enabled\n";
             //yield break;
+        }
+        else
+        {
+            Debug.Log("LocationService is enabled!");
+            debugLabel.text += "LocationService is enabled!\n";
         }
 
         // Start service before querying location
@@ -67,7 +81,7 @@ public class AppManager : MonoBehaviour
         {
             Debug.LogError("Timed out");
             debugLabel.text += "Timed out\n";
-            yield break;
+            //yield break;
         }
 
         // Connection has failed
