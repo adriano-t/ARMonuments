@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="20.0" toolVersion="9.2.7">
+<ModelTarget name="chiesa_castelnuovo_midpoly" targetId="8667e2eb456c498f969eef466d72aee4" version="11.1" toolVersion="9.2.7" bbox="-6.632452 -0.134114 -7.538049 2.689243 13.654244 7.802806" previewImage="8667e2eb456c498f969eef466d72aee4_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="chiesa_castelnuovo_midpolys_assembly" assemblyId="d81e95865dc049bcb607ac39ab3236c2">
+<Part name="chiesa_castelnuovo_midpoly" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.080026 5.89671 18.104" rotation="AD: 0.9942327563438177 0.15132833853276395 1.0209686468775605 168.258" image="chiesa_castelnuovo_midpoly_viewpoint_0000.png" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>

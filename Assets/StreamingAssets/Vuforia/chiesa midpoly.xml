@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="chiesa_castelnuovo_midpoly" motionHint="static" trackingMode="scan"/>
+
+</Tracking>
+
+<Assembly name="chiesa_castelnuovo_midpolys_assembly" assemblyId="d81e95865dc049bcb607ac39ab3236c2">
+<Part name="chiesa_castelnuovo_midpoly" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.080026 5.89671 18.104" rotation="AD: 0.9942327563438177 0.15132833853276395 1.0209686468775605 168.258" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
