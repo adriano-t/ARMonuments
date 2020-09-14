@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="fontana_50_low_poly" motionHint="static" trackingMode="scan"/>
+
+</Tracking>
+
+<Assembly name="fontana_50_low_polys_assembly" assemblyId="6846150ff6a44d718d4728dfd3eea288">
+<Part name="fontana_50_low_poly" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="viewpoint_0000" translation="-0.397096 1.87196 12.4257" rotation="AD: 0.9640198981742885 -0.2671819146103019 9.910102667718506 180.299" trained="yes">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
