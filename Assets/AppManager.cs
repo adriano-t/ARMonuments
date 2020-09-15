@@ -28,6 +28,13 @@ public class AppManager : MonoBehaviour
             wait = true;
         }
 
+        //if (!Permission.HasUserAuthorizedPermission(Permission.CoarseLocation))
+        //{
+        //    Permission.RequestUserPermission(Permission.CoarseLocation);
+        //    wait = true;
+        //}
+
+
         StartCoroutine(StartLocationService(wait));
 #endif
 
@@ -69,20 +76,28 @@ public class AppManager : MonoBehaviour
         Input.location.Start();
 
         // Wait until service initializes
-        int maxWait = 20;
+
+        float maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
-            yield return new WaitForSeconds(1);
-            maxWait--;
+            maxWait -= Time.deltaTime;
+            yield return null;
         }
 
         // Service didn't initialize in 20 seconds
-        if (maxWait < 1)
+        if (maxWait <= 0)
         {
             Debug.LogError("Timed out");
+            debugLabel.text += "status: " + Input.location.status + '\n';
             debugLabel.text += "Timed out\n";
-            //yield break;
+
+
+            debugLabel.text += "Restarting location service\n";
+            Input.location.Stop();
+            yield return new WaitForSeconds(3.0f);
+            Input.location.Start();
         }
+
 
         // Connection has failed
         if (Input.location.status == LocationServiceStatus.Failed)
