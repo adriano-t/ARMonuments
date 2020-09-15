@@ -97,8 +97,8 @@ public class AppManager : MonoBehaviour
             {
                 // Access granted and location value could be retrieved
                 Debug.Log("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-
-                debugLabel.text = "Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp + '\n';
+                
+                debugLabel.text = (Vector2.Distance( new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude), new Vector2(45.470765f, 10.893145f)) <00.00006f)? "fontana avis!": " non abbastanza vicino";
                 yield return new WaitForSeconds(5.0f);
             }
         }
