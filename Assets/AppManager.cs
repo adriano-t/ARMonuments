@@ -11,6 +11,7 @@ public class AppManager : MonoBehaviour
 {
     public Text debugLabel;
     public Text monumentLabel;
+    public Text foundLabel;
     public Monument[] monuments;
     public float range = 0.001f;
     private string currentDataset;
@@ -20,6 +21,7 @@ public class AppManager : MonoBehaviour
     //public float force = 10;
     void Start ()
     {
+        foundLabel.gameObject.SetActive(false);
         CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 
 #if PLATFORM_ANDROID
