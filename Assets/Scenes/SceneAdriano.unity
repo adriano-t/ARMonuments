@@ -2172,7 +2172,7 @@ MonoBehaviour:
   foundLabel: {fileID: 2093295302}
   monuments:
   - name: Chiesa Santa Maria, Castelnuovo
-    position: {x: 45.441772, y: 10.761733}
+    position: {x: 45.44158, y: 10.76166}
     dataset: chiesa midpoly
     obj: {fileID: 517640492}
   - name: Fontana avis

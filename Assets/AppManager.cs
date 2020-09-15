@@ -95,7 +95,6 @@ public class AppManager : MonoBehaviour
             debugLabel.text += "status: " + Input.location.status + '\n';
             debugLabel.text += "Timed out\n";
 
-
             debugLabel.text += "Restarting location service\n";
             Input.location.Stop();
             yield return new WaitForSeconds(3.0f);
@@ -125,12 +124,12 @@ public class AppManager : MonoBehaviour
                 {
                     if(Vector2.Distance(loc, monument.position) < range)
                     {
-                        if(currentDataset != monument.dataset)
+                        monumentLabel.text = "Monumento: " + monument.name;
+                        if (currentDataset != monument.dataset)
                         {
                             if (LoadAndActivateDataset(monument.dataset))
                             {
                                 currentDataset = monument.dataset;
-                                monumentLabel.text = "Monumento: " + monument.name;
                                 monument.obj.SetActive(true);
                                 found = true;
                                 break;
