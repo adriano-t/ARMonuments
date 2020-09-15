@@ -10,12 +10,14 @@ using Vuforia;
 public class AppManager : MonoBehaviour
 {
     public Text debugLabel;
-
+    public Text monumentLabel;
+    public Monument[] monuments;
+    public float range = 0.001f;
+    private string currentDataset;
     //public Text label;
     //public GameObject prefab;
     //public Transform modelTarget;
     //public float force = 10;
-
     void Start ()
     {
         CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
@@ -112,8 +114,35 @@ public class AppManager : MonoBehaviour
             {
                 // Access granted and location value could be retrieved
                 Debug.Log("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-                
-                debugLabel.text = (Vector2.Distance( new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude), new Vector2(45.470765f, 10.893145f)) <00.00006f)? "fontana avis!": " non abbastanza vicino";
+                debugLabel.text = "Latitude: " + Input.location.lastData.latitude + "\n";
+                debugLabel.text += "Longitude: " + Input.location.lastData.longitude + "\n";
+
+                var loc = new Vector2(Input.location.lastData.latitude, Input.location.lastData.longitude);
+                bool found = false;
+                foreach (var monument in monuments)
+                {
+                    if(Vector2.Distance(loc, monument.position) < range)
+                    {
+                        if(currentDataset != monument.dataset)
+                        {
+                            if (LoadAndActivateDataset(monument.dataset))
+                            {
+                                currentDataset = monument.dataset;
+                                monumentLabel.text = "Monumento: " + monument.name;
+                                monument.obj.SetActive(true);
+                                found = true;
+                                break;
+                            }
+                            else
+                                debugLabel.text += "Impossible to load dataset: " + monument.dataset + "\n";
+                        }
+                    }
+                    else
+                        monument.obj.SetActive(false);
+                }
+                if(!found)
+                    monumentLabel.text = "Nessun monumento nei dintorni";
+
                 yield return new WaitForSeconds(5.0f);
             }
         }
@@ -129,4 +158,38 @@ public class AppManager : MonoBehaviour
     //    rb.AddForce(transform.forward * force, ForceMode.Impulse);
     //    Physics.gravity = -10 * modelTarget.transform.up;
     //}
+
+
+    public bool LoadAndActivateDataset (string loadThisDataset)
+    { 
+        ObjectTracker objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
+        //Stop the tracker.
+        objectTracker.Stop();
+
+        //Create a new dataset object.
+        DataSet dataset = objectTracker.CreateDataSet();
+        //Load and activate the dataset if it exists.
+        if (DataSet.Exists(loadThisDataset))
+        {
+            if (!dataset.Load(loadThisDataset))
+                return false;
+
+            if (!objectTracker.ActivateDataSet(dataset))
+                return false;
+        }
+        else
+            return false;
+
+        //Start the object tracker.
+        return objectTracker.Start();
+    }
+}
+
+[System.Serializable]
+public struct Monument
+{
+    public string name;
+    public Vector2 position;
+    public string dataset;
+    public GameObject obj;
 }
