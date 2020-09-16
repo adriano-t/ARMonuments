@@ -122,25 +122,38 @@ public class AppManager : MonoBehaviour
                 bool found = false;
                 foreach (var monument in monuments)
                 {
-                    if(Vector2.Distance(loc, monument.position) < range)
+                    if (monument.name == "Chiesa Santa Maria, Castelnuovo")
+                        continue;
+
+                    var dist = Vector2.Distance(loc, monument.position);
+                    if (dist < range)
                     {
-                        monumentLabel.text = "Monumento: " + monument.name;
+                        monumentLabel.text = "Monumento: " + monument.name + " (" + dist + "°)";
                         if (currentDataset != monument.dataset)
                         {
-                            if (LoadAndActivateDataset(monument.dataset))
+                            //if (LoadAndActivateDataset(monument.dataset))
                             {
                                 currentDataset = monument.dataset;
                                 monument.obj.SetActive(true);
                                 found = true;
                                 break;
                             }
-                            else
-                                debugLabel.text += "Impossible to load dataset: " + monument.dataset + "\n";
+                            //else
+                            //    debugLabel.text += "Impossible to load dataset: " + monument.dataset + "\n";
+                        }
+                        else
+                        {
+                            found = true;
+                            break;
                         }
                     }
                     else
+                    {
+                        debugLabel.text +=  monument.name + " too far.\n";
                         monument.obj.SetActive(false);
+                    }
                 }
+
                 if(!found)
                     monumentLabel.text = "Nessun monumento nei dintorni";
 
@@ -173,13 +186,23 @@ public class AppManager : MonoBehaviour
         if (DataSet.Exists(loadThisDataset))
         {
             if (!dataset.Load(loadThisDataset))
+            {
+                debugLabel.text += "Load fail\n";
                 return false;
+            }
 
-            if (!objectTracker.ActivateDataSet(dataset))
-                return false;
+            objectTracker.ActivateDataSet(dataset);
+            //if (!objectTracker.ActivateDataSet(dataset))
+            //{
+            //    debugLabel.text += "Activate fail\n";
+            //    return false;
+            //}
         }
         else
+        {
+            debugLabel.text += "DataSet does not exists\n";
             return false;
+        }
 
         //Start the object tracker.
         return objectTracker.Start();

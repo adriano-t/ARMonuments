@@ -455,7 +455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &517640493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,6 +2179,10 @@ MonoBehaviour:
     position: {x: 45.470764, y: 10.893145}
     dataset: fontana_50_low_poly
     obj: {fileID: 394324249}
+  - name: Casa
+    position: {x: 45.44017, y: 10.76347}
+    dataset: chiesa midpoly
+    obj: {fileID: 517640492}
   range: 0.001
 --- !u!4 &2023852928
 Transform:
