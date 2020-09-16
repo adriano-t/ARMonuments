@@ -245,14 +245,14 @@ public class AppManager : MonoBehaviour
 
                     modelTargets.Add(tb as ModelTargetBehaviour);
                 }
-                else
-                    toDestroy.Add(tb);//destroy this target (usually it spawns an image target)
+                //else
+                //    toDestroy.Add(tb);//destroy this target (usually it spawns an image target)
             }
 
             //destroy all unwanted targets
-            foreach(var obj in toDestroy)
-                Destroy(obj.gameObject);
-            toDestroy.Clear();
+            //foreach(var obj in toDestroy)
+            //    Destroy(obj.gameObject);
+            //toDestroy.Clear();
         }
         Debug.Log(started ? "Tracker started" : "Tracked failed to start");
         return started;
