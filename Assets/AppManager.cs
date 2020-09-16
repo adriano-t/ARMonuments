@@ -242,7 +242,8 @@ public class AppManager : MonoBehaviour
                     //spawn the corresponding augmentation object and attach to the trackable
                     var augmentationObject = GetAumentationObject(monument, tb.TrackableName);
                     augmentationObject.transform.SetParent(tb.gameObject.transform, false);
-
+                    augmentationObject.transform.localPosition = Vector3.zero;
+                    augmentationObject.transform.localRotation = Quaternion.identity;
                     modelTargets.Add(tb as ModelTargetBehaviour);
                 }
                 //else
