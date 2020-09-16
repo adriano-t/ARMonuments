@@ -185,7 +185,7 @@ public class AppManager : MonoBehaviour
         modelTargets.Clear();
 
 
-        var datasetName = monument.name;
+        var datasetName = monument.dataset;
         ObjectTracker objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
         Debug.LogWarning("Loading Dataset: " + datasetName);
         //Create a new dataset object.
