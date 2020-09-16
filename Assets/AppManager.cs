@@ -61,6 +61,7 @@ public class AppManager : MonoBehaviour
 
     IEnumerator StartLocationService (bool wait)
     {
+        yield return new WaitForSeconds(2.0f);
         if (wait)
         {
             debugLabel.text += "Waiting for authorization\n";
@@ -187,6 +188,9 @@ public class AppManager : MonoBehaviour
 
         var datasetName = monument.dataset;
         ObjectTracker objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
+        if (objectTracker == null)
+            return false;
+
         Debug.LogWarning("Loading Dataset: " + datasetName);
         //Create a new dataset object.
         DataSet dataset = objectTracker.CreateDataSet();
