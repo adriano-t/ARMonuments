@@ -127,9 +127,6 @@ public class AppManager : MonoBehaviour
                 bool found = false;
                 foreach (var monument in monuments)
                 {
-                    if (monument.name == "Chiesa Santa Maria, Castelnuovo")
-                        continue;
-
                     var dist = Vector2.Distance(loc, monument.position);
                     if (dist < range)
                     {
