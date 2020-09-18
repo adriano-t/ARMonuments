@@ -585,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].targets.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
@@ -637,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].targets.Array.data[0].modelTarget
-      value: porta_palio_grande
+      value: Dante
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
@@ -654,7 +654,7 @@ PrefabInstance:
         type: 3}
       propertyPath: monuments.Array.data[2].targets.Array.data[0].prefab
       value: 
-      objectReference: {fileID: 8886122119823968159, guid: 1f18e5147871aa148801ecda56465d4a,
+      objectReference: {fileID: 8886122119823968159, guid: 0d818ae77e02fc94aa49dcc1d9177687,
         type: 3}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
@@ -669,7 +669,7 @@ PrefabInstance:
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].dataset
-      value: porta_palio_spezzata_texture
+      value: Dante_text
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}

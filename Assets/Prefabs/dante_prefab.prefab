@@ -204,8 +204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 6.7120004, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.274, y: 1.89}
-  m_SizeDelta: {x: 220.58838, y: 269.48328}
+  m_AnchoredPosition: {x: 2.274, y: 2.5602}
+  m_SizeDelta: {x: 220.58838, y: 134.51392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8686853646161045285
 Canvas:
@@ -344,11 +344,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\xABE da questo imaginare cominciai ad andare l\xE0 dov\u2019ella [la
-    Donna Gentile] si dimostrava veracemente, cio\xE8 ne le scuole de li religiosi
-    e a le disputazioni de li filosofanti. S\xEC che in picciol tempo, forse di trenta
-    mesi, cominciai tanto a sentire de la sua dolcezza, che lo suo amore cacciava
-    e distruggeva ogni altro pensiero.\xBB"
+  m_Text: "\xABNel mezzo del cammin di nostra vita\r\nmi ritrovai per una selva oscura,\r\nch\xE9
+    la diritta via era smarrita.\xBB"
 --- !u!1 &8886122118933996550
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +545,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8886122119755139735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 7.44, z: -0.07}
+  m_LocalPosition: {x: -0.07, y: 7.0109, z: -0.07}
   m_LocalScale: {x: 0.19999996, y: 0.20000002, z: 0.19999997}
   m_Children: []
   m_Father: {fileID: 8886122119823968152}
