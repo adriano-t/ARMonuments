@@ -579,6 +579,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
+      propertyPath: monuments.Array.data[0].targets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
+        type: 3}
       propertyPath: statusLabel
       value: 
       objectReference: {fileID: 942781972}
@@ -605,17 +610,17 @@ PrefabInstance:
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].name
-      value: CASA
+      value: Casa Adriano
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].position.x
-      value: 0
+      value: 45.440308
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
       propertyPath: monuments.Array.data[2].position.y
-      value: 0
+      value: 10.763467
       objectReference: {fileID: 0}
     - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
@@ -632,6 +637,27 @@ PrefabInstance:
       propertyPath: monuments.Array.data[2].targets.Array.data[0].prefab
       value: 
       objectReference: {fileID: 8886122119823968159, guid: 26f25240ded2e3849af45183aa0f9132,
+        type: 3}
+    - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
+        type: 3}
+      propertyPath: monuments.Array.data[0].position.x
+      value: 45.44158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
+        type: 3}
+      propertyPath: monuments.Array.data[0].position.y
+      value: 10.76166
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
+        type: 3}
+      propertyPath: monuments.Array.data[0].targets.Array.data[0].modelTarget
+      value: chiesa_castelnuovo_midpoly
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777287347208739616, guid: 123cf386d45e6b746a0395558292ff9f,
+        type: 3}
+      propertyPath: monuments.Array.data[0].targets.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 8553022468481998214, guid: a1ad959a0cf97f34cafc7585f22107c7,
         type: 3}
     - target: {fileID: 2777287347208739617, guid: 123cf386d45e6b746a0395558292ff9f,
         type: 3}
