@@ -50,9 +50,12 @@ MonoBehaviour:
   foundLabel: {fileID: 0}
   monuments:
   - name: Chiesa Santa Maria, Castelnuovo
-    position: {x: 30, y: 0}
+    position: {x: 45.44158, y: 10.76166}
     dataset: chiesa midpoly
-    targets: []
+    targets:
+    - modelTarget: chiesa_castelnuovo_midpoly
+      prefab: {fileID: 8553022468481998214, guid: a1ad959a0cf97f34cafc7585f22107c7,
+        type: 3}
   - name: Fontana avis
     position: {x: 45.470764, y: 10.893145}
     dataset: fontana_50_low_poly
@@ -60,12 +63,12 @@ MonoBehaviour:
     - modelTarget: fontana_50_low_poly
       prefab: {fileID: 8886122119823968159, guid: 0bcaac64ce68b254399f7a19cb77a4ee,
         type: 3}
-  - name: chiesa
-    position: {x: 45.44158, y: 10.76166}
-    dataset: chiesa midpoly
+  - name: Casa Adriano
+    position: {x: 45.440308, y: 10.763467}
+    dataset: porta_palio _full_texture
     targets:
-    - modelTarget: chiesa_castelnuovo_midpoly
-      prefab: {fileID: 8553022468481998214, guid: a1ad959a0cf97f34cafc7585f22107c7,
+    - modelTarget: porta_palio_full
+      prefab: {fileID: 8886122119823968159, guid: 26f25240ded2e3849af45183aa0f9132,
         type: 3}
   - name: fontana
     position: {x: 45.470768, y: 10.89314}

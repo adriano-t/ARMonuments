@@ -151,7 +151,7 @@ public class AppManager : MonoBehaviour
                     }
                     else
                     {
-                        debugLabel.text +=  monument.name + " too far.\n";
+                        //debugLabel.text +=  monument.name + " too far.\n";
                     }
                 }
 
