@@ -1,2 +1,2 @@
 # ARMonuments
-Computer vision project
+Progetto Unity per il corso di visione computazionale.
